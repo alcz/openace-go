@@ -1,0 +1,109 @@
+SysSetTable( arg1 *uint, arg2 int, arg3 HB_ACEDATA, arg4 string ) (errcode uint) // todo
+SetCallbackOnRTE( fp uintptr ) ( errcode uint ) // logic
+SetCallbackTrace( fp uintptr ) ( errcode uint ) // logic
+AddCustomKey( index uint ) ( errcode uint ) // logic
+AppendRecord( wa uint ) ( errcode uint ) // logic
+ApplicationExit() ( errcode uint ) // logic
+AtBOF( wa uint, at_bof *uint16 ) ( errcode uint ) // logicu16last:erristrue
+AtEOF( wa uint, at_eof *uint16 ) ( errcode uint ) // logicu16last:erristrue
+CacheRecords( wa uint, num_recs uint16 ) ( errcode uint ) // logic
+BeginTransaction( conn uint ) ( errcode uint ) // logic
+ClearFilter( wa uint ) ( errcode uint ) // logic
+ClearProgressCallback() ( errcode uint ) // logic
+ClearRelation( master_wa uint ) ( errcode uint ) // logic
+ClearScope( index uint, opt uint16 ) ( errcode uint ) // logic
+CloseAllIndexes( wa uint ) ( errcode uint ) // logic
+CloseIndex( index uint ) ( errcode uint ) // logic
+CloseTable( wa uint ) ( errcode uint ) // logic
+CommitTransaction( conn uint ) ( errcode uint ) // logic
+Connect( server_name string, conn *uint ) ( errcode uint ) // uintlast
+CopyTableContents( handle uint, wa_to uint, filter_opt uint16 ) ( errcode uint ) // logic
+CreateIndex( handle uint, filename string, tag string, expr string, cond string, while string, opt uint, index *uint ) ( errcode uint ) // uintlast
+CreateTable( conn uint, name string, alias string, table_type uint16, char_type uint16, lock_type uint16, check_rights uint16, memo_size uint16, fields string, wa *uint ) ( errcode uint ) // uintlast
+DeleteCustomKey( index uint ) ( errcode uint ) // logic
+DeleteIndex( index uint ) ( errcode uint ) // logic
+DeleteRecord( wa uint ) ( errcode uint ) // logic
+Disconnect( conn uint ) ( errcode uint ) // logic
+ExtractKey( index uint, buf_outp uintptr, len *uint16 ) ( errcode uint ) // string:buf_outp
+GetAllIndexes( wa uint, indexes *uint, len *uint16 ) ( errcode uint ) // todo
+GetAllLocks( wa uint, locks *uint, len *uint16 ) ( errcode uint ) // todo
+GetBinary( wa uint, fname string, offset uint, buf_outp string, len *uint ) ( errcode uint ) // string:buf_outp
+GetBinaryLength( wa uint, fname string, len *uint ) ( errcode uint ) // uintlast
+GetDateFormat( format_outp string, len *uint16 ) ( errcode uint ) // string:format_outp
+GetDouble( wa uint, fname string, value *float64 ) ( errcode uint ) // float64last
+GetErrorString( errcode uint, buf_outp string, len *uint16 ) ( errcode uint ) // string:buf_outp
+GetField( wa uint, fname string, buf_outp string, len *uint, opt uint16 ) ( errcode uint ) // string:buf_outp
+GetFieldDecimals( wa uint, fname string, decimals *uint16 ) ( errcode uint ) // uint16last
+GetFieldLength( wa uint, fname string, len *uint ) ( errcode uint ) // uintlast
+GetFieldName( wa uint, pos uint16, buf_outp string, len *uint16 ) ( errcode uint ) // string:buf_outp
+GetFieldType( wa uint, fname string, type *uint16 ) ( errcode uint ) // uint16last
+GetHandleType( handle uint, type *uint16 ) ( errcode uint ) // uint16last
+GetIndexCondition( index uint, buf_outp string, len *uint16 ) ( errcode uint ) // string:buf_outp
+GetIndexExpr( index uint, buf_outp string, len *uint16 ) ( errcode uint ) // string:buf_outp
+GetIndexFilename( index uint, opt uint16, buf_outp string, len *uint16 ) ( errcode uint ) // string:buf_outp
+GetIndexName( index uint, buf_outp string, len *uint16 ) ( errcode uint ) // string:buf_outp
+GetIndexHandle( wa uint, tag string, index *uint ) ( errcode uint ) // uintlast
+GetIndexHandleByOrder( wa uint, ordnum uint16, index *uint ) ( errcode uint ) // uintlast
+GetJulian( wa uint, fname string, date *int ) ( errcode uint ) // intlast
+GetKeyCount( index uint, filter_opt uint16, count *uint ) ( errcode uint ) // uintlast
+GetKeyLength( index uint, length *uint16 ) ( errcode uint ) // uint16last
+GetKeyNum( index uint, filter_opt uint16, key_no *uint ) ( errcode uint ) // uintlast
+GetKeyType( index uint, type *uint16 ) ( errcode uint ) // uint16last
+GetLastError( errcode *uint, buf_outp string, len *uint16 ) ( errcode uint ) // string:buf_outp
+GetLastTableUpdate( wa uint, buf_outp string, len *uint16 ) ( errcode uint ) // string:buf_outp
+GetLogical( wa uint, fname string, value *uint16 ) ( errcode uint ) // logicu16last
+GetMemoLength( wa uint, fname string, len *uint ) ( errcode uint ) // uintlast
+GetMilliseconds( wa uint, fname string, time *int ) ( errcode uint ) // intlast
+GetNumFields( wa uint, count *uint16 ) ( errcode uint ) // uint16last
+GetNumIndexes( wa uint, count *uint16 ) ( errcode uint ) // uint16last
+GetNumLocks( wa uint, count *uint16 ) ( errcode uint ) // uint16last
+GetRecordCount( wa uint, filter_opt uint16, count *uint ) ( errcode uint ) // uintlast
+GetRecordNum( wa uint, filter_opt uint16, recno *uint ) ( errcode uint ) // uintlast
+GetRecordLength( wa uint, length *uint ) ( errcode uint ) // uintlast
+GetRelKeyPos( wa uint, pos *float64 ) ( errcode uint ) // float64last
+GetServerName( conn uint, buf_outp string, len *uint16 ) ( errcode uint ) // string:buf_outp
+GetString( wa uint, fname string, buf_outp uintptr, len *uint, opt uint16 ) ( errcode uint ) // string:buf_outp
+GetTableAlias( wa uint, buf_outp string, len *uint16 ) ( errcode uint ) // string:buf_outp
+GetTableFilename( wa uint, opt uint16, buf_outp string, len *uint16 ) ( errcode uint ) // string:buf_outp
+GetTableType( wa uint, type *uint16 ) ( errcode uint ) // uint16last
+GotoBottom( wa uint ) ( errcode uint ) // logic
+GotoRecord( wa uint, recno uint ) ( errcode uint ) // logic
+GotoTop( wa uint ) ( errcode uint ) // logic
+IsEmpty( wa uint, fname string, empty *uint16 ) ( errcode uint ) // logicu16last:erristrue
+IsIndexDescending( index uint, desc *uint16 ) ( errcode uint ) // logicu16last
+IsIndexUnique( index uint, uniq *uint16 ) ( errcode uint ) // logicu16last
+IsRecordDeleted( wa uint, deleted *uint16 ) ( errcode uint ) // logicu16last:erristrue
+LockRecord( wa uint, recno uint ) ( errcode uint ) // logic
+LockTable( wa uint ) ( errcode uint ) // logic
+MgConnect( server string, username string, password string, handle *uint ) ( errcode uint ) // uintlast
+MgDisconnect( handle uint ) ( errcode uint ) // logic
+MgGetInstallInfo( handle uint, info ACE_MGMT_INSTALL_INFO, len *uint16 ) ( errcode uint ) // todo
+MgGetServerType( handle uint, arg2 *uint16 ) ( errcode uint ) // uint16last
+NullTerminateStrings( null_term uint16 ) ( errcode uint ) // logic
+OpenIndex( wa uint, name string, indexes *uint, len *uint16 ) ( errcode uint ) // todo
+OpenTable( conn uint, name string, alias string, table_type uint16, char_type uint16, lock_type uint16, check_rights uint16, opts uint, wa *uint ) ( errcode uint ) // uintlast
+PackTable( wa uint ) ( errcode uint ) // logic
+RecallRecord( wa uint ) ( errcode uint ) // logic
+RefreshRecord( wa uint ) ( errcode uint ) // logic
+Reindex( wa uint ) ( errcode uint ) // logic
+RollbackTransaction( conn uint ) ( errcode uint ) // logic
+Seek( index uint, key string, len uint16, data_type uint16, seek_type uint16, found *uint16 ) ( errcode uint ) // logicu16last
+SeekLast( index uint, key string, len uint16, data_type uint16, found *uint16) ( errcode uint ) // logicu16last
+SetDateFormat( format string ) ( errcode uint ) // logic
+SetDefault( def string ) ( errcode uint ) // logic
+SetDouble( wa uint, fname string, value float64 ) ( errcode uint ) // logic
+SetEmpty( wa uint, fname string ) ( errcode uint ) // logic
+SetField( wa uint, fname string, buf string, len uint ) ( errcode uint ) // logic
+SetFilter( wa uint, filter string ) ( errcode uint ) // logic
+SetJulian( wa uint, fname string, julian int ) ( errcode uint ) // logic
+SetLogical( wa uint, fname string, value uint16 ) ( errcode uint ) // logic
+SetMilliseconds( wa uint, fname string, ms int ) ( errcode uint ) // logic
+SetRelKeyPos( wa uint, pos float64 ) ( errcode uint ) // logic
+SetSearchPath( path string ) ( errcode uint ) // logic
+SetString( wa uint, fname string, buf string, len uint ) ( errcode uint ) // logic
+ShowDeleted( show_deleted uint16 ) ( errcode uint ) // logic
+Skip( wa uint, num_recs int ) ( errcode uint ) // logic
+UnlockRecord( wa uint, recno uint ) ( errcode uint ) // logic
+UnlockTable( wa uint ) ( errcode uint ) // logic
+WriteRecord( wa uint ) ( errcode uint ) // logic
+ZapTable( wa uint ) ( errcode uint ) // logic
