@@ -23,10 +23,10 @@ as no C 32-bit stdcall convention / binary compatibility with ace32.dll is neede
 see build32.cmd preferably in examples/ 
 
 ### there are four different packages of functions in this lib:
-- [openace.*](https://github.com/alcz/openace-go/goaddgen.txt) - nearly 1:1 mappings to C API, not convinient, reading a string needs manual buffer allocation
-- [oauto.*](https://github.com/alcz/openace-go/oauto/aceauto.go)   - automatic string mappings, errors are redirected to Go panic()
-- [oerr.*](https://github.com/alcz/openace-go/oerr/acewerr.go)    - automatic string mappings, errors returned as second value
-- [onoerr.*](https://github.com/alcz/openace-go/onoerr/acenoerr.go)  - automatic string mappings, no errors are reported, only false
+- [openace.*](https://github.com/alcz/openace-go/tree/master/goaddgen.txt) - nearly 1:1 mappings to C API, not convinient, reading a string needs manual buffer allocation
+- [oauto.*](https://github.com/alcz/openace-go/tree/master/oauto/aceauto.go)   - automatic string mappings, errors are redirected to Go panic()
+- [oerr.*](https://github.com/alcz/openace-go/tree/master/oerr/acewerr.go)    - automatic string mappings, errors returned as second value
+- [onoerr.*](https://github.com/alcz/openace-go/tree/master/onoerr/acenoerr.go)  - automatic string mappings, no errors are reported, only false
             or empty results are returned in such case. do not use for
             serious tasks, only for tests, quick-tools or with extreme care
 
